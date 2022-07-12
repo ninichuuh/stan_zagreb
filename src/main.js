@@ -35,6 +35,7 @@ const runTask = async () => {
     );
 
     console.log("sending messages to Telegram");
+    console.log(houses)
     houses.forEach(({ path }) => {
       let glava = `Nova nekretnina na njuškalu: [click here](${path})`;
       nodeFetch(`https://api.telegram.org/bot${BOT_API}/sendMessage`, {
